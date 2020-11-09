@@ -1,8 +1,8 @@
 # Work Day Scheduler <br>
 
 ## Links
-Live Deployment: 
-Github Repository:
+Live Deployment: https://jwilferd10.github.io/Work-Day-Scheduler/. <br>
+Github Repository: https://github.com/jwilferd10/Work-Day-Scheduler <br>
 
 ### A Simple Calendar App For Scheduling Your Work Day! <br>
 
@@ -16,4 +16,3 @@ So tha that I can manage my time effectively <br>
 2. When user scrolls down, they're presented with time blocks using standard business hours <br>
 3. When user view the time blocks for that day, each time block is color coded indicating past, present, and future <br>
 4. When user clicks onto a time block they can enter an event <br>
-
