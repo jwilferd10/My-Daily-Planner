@@ -18,7 +18,7 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./Develop/style/style.css"/>
     <title>Work Day Scheduler</title>
   </head>
 
@@ -26,13 +26,106 @@
     <header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
+      <!-- Tied together by moment.js -->
       <p id="currentDay" class="lead"></p>
     </header>
+    
+    <!-- Timeblocks Wrapper -->
     <div class="container">
-      <!-- Timeblocks go here -->
+      
+      <!-- Start of Time Row & Column 1 -->
+      <div class="row timeline">
+        <div class="col-1 hour">
+          <p id = "9">9 am</p>
+        </div>
+        <textarea id = "1" class="col-10"></textarea>
+        <button class="col-1 saveBtn fas fa-lock"></button>
+      </div>
+      <!-- End of Time Row & Column 1 -->
+
+      <!-- Start of Time Row & Column 2 -->
+      <div class="row timeline">
+        <div class="col-1 hour">
+          <p id = "10">10 am</p>
+        </div> 
+        <textarea id = "2" class="col-10"></textarea>
+        <button class="col-1 saveBtn fas fa-lock"></button>
+      </div>
+      <!-- End of Time Row & Column 2 -->
+
+      <!-- Start of Time Row & Column 3 -->
+      <div class="row timeline">
+        <div class="col-1 hour">
+          <p id = "11">11 am</p>
+        </div>
+        <textarea id = "3" class="col-10"></textarea>
+        <button class="col-1 saveBtn fas fa-lock"></button>
+      </div>
+      <!-- End of Time Row & Column 3 -->
+
+      <!-- Start of Time Row & Column 4 -->
+      <div class="row timeline">
+        <div class="col-1 hour">
+          <p id = "12">12 pm</p>
+        </div> 
+        <textarea id = "1" class="col-10"></textarea>
+        <button class="col-1 saveBtn fas fa-lock"></button>
+      </div>
+      <!-- End of Time Row & Column 4 -->
+
+      <!-- Start of Time Row & Column 5 -->
+      <div class="row timeline">
+        <div class="col-1 hour">
+          <p id = "13">1 pm</p>
+        </div>
+        <textarea id = "5" class="col-10"></textarea>
+        <button class="col-1 saveBtn fas fa-lock"></button>
+      </div>
+      <!-- End of Time Row & Column 5 -->
+
+      <!-- Start of Time Row & Column 6 -->
+      <div class="row timeline">
+        <div class="col-1 hour">
+          <p id = "14">2 pm</p>
+        </div>
+        <textarea id = "6" class="col-10"></textarea>
+        <button class="col-1 saveBtn fas fa-lock"></button>
+      </div>
+      <!-- End of Time Row & Column 6 -->
+
+      <!-- Start of Time Row & Column 7 -->
+      <div class="row timeline">
+        <div class="col-1 hour">
+          <p id = "15">3 pm</p>
+        </div>
+        <textarea id = "7" class="col-10"></textarea>
+        <button class="col-1 saveBtn fas fa-lock"></button>
+      </div>
+      <!-- End of Time Row & Column 7 -->
+
+      <!-- Start of Time Row & Column 8 -->
+      <div class="row timeline">
+        <div class="col-1 hour">
+          <p id = "16">4 pm</p>
+        </div>
+        <textarea id = "8" class="col-10"></textarea>
+        <button class="col-1 saveBtn fas fa-lock"></button>
+      </div>
+      <!-- End of Time Row & Column 8 -->
+
+      <!-- Start of Time Row & Column 9 -->
+      <div class="row timeline">
+        <div class="col-1 hour">
+          <p id = "17">5 pm</p>
+        </div> 
+        <textarea id = "9" class="col-10"></textarea>
+        <button class="col-1 saveBtn fas fa-lock"></button>
+      </div>
+      <!-- End of Time Row & Column 9 -->
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="Develop/script/script.js"></script>
   </body>
 </html>
