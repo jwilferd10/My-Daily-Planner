@@ -66,7 +66,24 @@ textarea{
   color: white;
 }
 
-.saveBtn i:hover {
-  font-size: 20px;
-  transition: all .3s ease-in-out;
+.saveBtn:hover .fa-lock {
+  animation: breathingEffect 1.8s ease-out infinite normal forwards;
+}
+
+@keyframes breathingEffect {
+  0% {
+    transform: scale(1.0);
+  }
+  25% {
+    transform: scale(1.2);
+  }
+  50% {
+    transform: scale(1.4);
+  }
+  75% {
+    transform: scale(1.2);
+  }
+  100%{ 
+    transform: scale(1.0);
+  }
 }
