@@ -4,20 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="./Develop/style/style.css"/>
     <title>My Daily Planner</title>
   </head>
@@ -25,104 +14,107 @@
   <body>
     <header class="jumbotron">
       <h1 class="display-3">📋 My Daily Planner 📅</h1>
-      <p class="pt-3 lead">Done using paper but still need a planner? Here's an app to help you with that!</p>
-      <!-- Tied together by moment.js -->
-      <p id="currentDay" class="lead"></p>
+      <p class="pt-3 h5">Done using paper but still need a planner? Here's an app to help you with that!</p>
     </header>
     
     <!-- Timeblocks Wrapper -->
-    <div class="container">
-      
+    <main class="container col-12 col-lg-9 d-flex flex-column">
+      <!-- Time of the Day -->
+      <p id="currentDay" class="p-2 lead d-flex justify-content-center"></p>
+
       <!-- Start of Time Row & Column 1 -->
-      <div class="row timeline">
+      <section class="row mb-4 mb-5-sm timeline">
         <div class="col-1 hour">
           <p id = "9">9 am</p>
         </div>
         <textarea id = "1" class="col-10"></textarea>
         <button class="col-1 saveBtn"><span class="fas fa-lock"></span></button>
-      </div>
+      </section>
       <!-- End of Time Row & Column 1 -->
 
       <!-- Start of Time Row & Column 2 -->
-      <div class="row timeline">
+      <section class="row mb-4 timeline">
         <div class="col-1 hour">
           <p id = "10">10 am</p>
         </div> 
         <textarea id = "2" class="col-10"></textarea>
         <button class="col-1 saveBtn"><span class="fas fa-lock"></span></button>
-      </div>
+      </section>
       <!-- End of Time Row & Column 2 -->
 
       <!-- Start of Time Row & Column 3 -->
-      <div class="row timeline">
+      <section class="row mb-4 timeline">
         <div class="col-1 hour">
           <p id = "11">11 am</p>
         </div>
         <textarea id = "3" class="col-10"></textarea>
         <button class="col-1 saveBtn "><span class="fas fa-lock"></span></button>
-      </div>
+      </section>
       <!-- End of Time Row & Column 3 -->
 
       <!-- Start of Time Row & Column 4 -->
-      <div class="row timeline">
+      <section class="row mb-4 timeline">
         <div class="col-1 hour">
           <p id = "12">12 pm</p>
         </div> 
         <textarea id = "1" class="col-10"></textarea>
         <button class="col-1 saveBtn "><span class="fas fa-lock"></span></button>
-      </div>
+      </section>
       <!-- End of Time Row & Column 4 -->
 
       <!-- Start of Time Row & Column 5 -->
-      <div class="row timeline">
+      <section class="row mb-4 timeline">
         <div class="col-1 hour">
           <p id = "13">1 pm</p>
         </div>
         <textarea id = "5" class="col-10"></textarea>
         <button class="col-1 saveBtn "><span class="fas fa-lock"></span></button>
-      </div>
+      </section>
       <!-- End of Time Row & Column 5 -->
 
       <!-- Start of Time Row & Column 6 -->
-      <div class="row timeline">
+      <section class="row mb-4 timeline">
         <div class="col-1 hour">
           <p id = "14">2 pm</p>
         </div>
         <textarea id = "6" class="col-10"></textarea>
         <button class="col-1 saveBtn "><span class="fas fa-lock"></span></button>
-      </div>
+      </section>
       <!-- End of Time Row & Column 6 -->
 
       <!-- Start of Time Row & Column 7 -->
-      <div class="row timeline">
+      <section class="row mb-4 timeline">
         <div class="col-1 hour">
           <p id = "15">3 pm</p>
         </div>
         <textarea id = "7" class="col-10"></textarea>
         <button class="col-1 saveBtn "><span class="fas fa-lock"></span></button>
-      </div>
+      </section>
       <!-- End of Time Row & Column 7 -->
 
       <!-- Start of Time Row & Column 8 -->
-      <div class="row timeline">
+      <section class="row mb-4 timeline">
         <div class="col-1 hour">
           <p id = "16">4 pm</p>
         </div>
         <textarea id = "8" class="col-10"></textarea>
         <button class="col-1 saveBtn "><span class="fas fa-lock"></span></button>
-      </div>
+      </section>
       <!-- End of Time Row & Column 8 -->
 
       <!-- Start of Time Row & Column 9 -->
-      <div class="row timeline">
+      <section class="row mb-4 timeline">
         <div class="col-1 hour">
           <p id = "17">5 pm</p>
         </div> 
         <textarea id = "9" class="col-10"></textarea>
         <button class="col-1 saveBtn"><span class="fas fa-lock"></span></button>
-      </div>
+      </section>
       <!-- End of Time Row & Column 9 -->
-    </div>
+    
+    </main>
+
+    <footer>I'm A Footer</footer>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
