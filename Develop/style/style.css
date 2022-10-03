@@ -25,6 +25,7 @@ textarea{
   white-space: pre-wrap;
 }
 
+/* start of time-blocks */
 .time-block{
   text-align: center;
   border-radius: 15px;
@@ -68,6 +69,11 @@ textarea{
 
 .saveBtn:hover .fa-lock {
   animation: breathingEffect 1.8s ease-out infinite normal forwards;
+}
+
+/* Footer Button */
+.fa-github {
+  transform: scale(2.0);
 }
 
 @keyframes breathingEffect {
