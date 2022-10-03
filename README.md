@@ -1,4 +1,4 @@
-# Work Day Scheduler <br>
+# :clipboard: :watch: :date: Work Day Scheduler :date: :watch: :clipboard: <br>
 
 ## Links
 Live Deployment: https://jwilferd10.github.io/Work-Day-Scheduler/. <br>
