@@ -1,3 +1,5 @@
+saveBtnEl = document.getElementsByClassName("saveBtn");
+
 // Using moment.js for calender display 
 // Grabbing header using DOM & setting up moment.js 
 var header = document.header;
@@ -33,3 +35,11 @@ $('.timeline').each(function() {
         $(this).children("textarea").addClass('future')
     }
 });
+
+// saveBtn has been clicked
+for (let i = 0; i < saveBtnEl.length; i++) {
+    saveBtnEl[i].addEventListener("click", function() {
+        // indicates buttons work
+        console.log("I've been clicked!");
+    });
+}
