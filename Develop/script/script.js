@@ -1,4 +1,4 @@
-saveBtnEl = document.getElementsByClassName("saveBtn");
+let saveBtnEl = document.getElementsByClassName("saveBtn");
 
 // Using moment.js for calender display 
 // Grabbing header using DOM & setting up moment.js 
@@ -36,10 +36,20 @@ $('.timeline').each(function() {
     }
 });
 
+// Try to add an API into the project that grabs random quotes and displays them under the days date
+
+// Add the ability to have an eventListener for all the save buttons
 // saveBtn has been clicked
 for (let i = 0; i < saveBtnEl.length; i++) {
     saveBtnEl[i].addEventListener("click", function() {
         // indicates buttons work
         console.log("I've been clicked!");
+
+        // alert the user the entry has been saved
+        window.alert("Your entry has been saved!");
+
+        // Add the ability to toggle between the button emojis
+
+        // Create a task that saves the user input from the text field into localStorage
     });
 }

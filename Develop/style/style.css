@@ -67,7 +67,7 @@ textarea{
   color: white;
 }
 
-.saveBtn:hover .fa-lock {
+.saveBtn:hover .fas {
   animation: breathingEffect 1.8s ease-out infinite normal forwards;
 }
 
