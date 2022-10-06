@@ -36,8 +36,6 @@ $('.timeline').each(function() {
     }
 });
 
-// Try to add an API into the project that grabs random quotes and displays them under the days date
-
 // Add the ability to have an eventListener for all the save buttons
 // saveBtn has been clicked
 for (let i = 0; i < saveBtnEl.length; i++) {
@@ -48,8 +46,9 @@ for (let i = 0; i < saveBtnEl.length; i++) {
         // alert the user the entry has been saved
         window.alert("Your entry has been saved!");
 
-        // Add the ability to toggle between the button emojis
-
+        // Add the ability to toggle between the button emojis (LOOK INTO TOGGLES)
+        
         // Create a task that saves the user input from the text field into localStorage
+        
     });
 }
