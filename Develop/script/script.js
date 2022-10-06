@@ -46,9 +46,12 @@ for (let i = 0; i < saveBtnEl.length; i++) {
         // alert the user the entry has been saved
         window.alert("Your entry has been saved!");
 
-        // Add the ability to toggle between the button emojis (LOOK INTO TOGGLES)
+        // save the .val of taskEntry
         
-        // Create a task that saves the user input from the text field into localStorage
+        // save the id from the task 
         
+        // save both taskEntry and taskID into localStorage setItem
     });
 }
+
+// retrieve from localStorage using getItem 
