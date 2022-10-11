@@ -1,4 +1,5 @@
 let saveBtnEl = document.getElementsByClassName("saveBtn");
+let testValue = document.getElementById("1").value;
 
 // Using moment.js for calender display 
 // Grabbing header using DOM & setting up moment.js 
@@ -43,15 +44,23 @@ for (let i = 0; i < saveBtnEl.length; i++) {
         // indicates buttons work
         console.log("I've been clicked!");
 
+        // save the .val of taskEntry
+        saveTask();
+
         // alert the user the entry has been saved
         window.alert("Your entry has been saved!");
 
-        // save the .val of taskEntry
-        
         // save the id from the task 
         
         // save both taskEntry and taskID into localStorage setItem
     });
+}
+
+// create a function that saves the task of each of the text fields
+let saveTask = function() {
+    // let task = dgdfg;
+    // let hour = dgdfg;
+    console.log(testValue);
 }
 
 // retrieve from localStorage using getItem 
