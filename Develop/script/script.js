@@ -61,11 +61,15 @@ for (let i = 0; i < saveBtnEl.length; i++) {
 
 let saveTask = function() {
 
-    for (let i = 0; i < textAreaEl.length; i++) {
-        textAreaEl[i].value
+    // check
+    window.alert("task saved successfully");
 
-        console.log(textAreaEl);
-    }
+    // store the value of taskEntry and the associated id of each timeblock 
+    let timeBlock = $(this).parent().attr("id");
+    let taskText = $(this).siblings(".taskEntry").val();
+
+    // save values into localStorage
+    localStorage.setItem(timeBlock, taskText);
 }
 
 // retrieve from localStorage using getItem 
