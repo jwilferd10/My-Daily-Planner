@@ -1,6 +1,5 @@
-let saveBtnEl = document.getElementsByClassName("saveBtn");
-
-let textAreaEl = document.getElementsByClassName("taskEntry");
+// If nothning is in localStorage, set list into an empty array
+let savedUserEntry = JSON.parse(localStorage.getItem('savedEntry')) || [];
 
 // Using moment.js for calender display 
 // Grabbing header using DOM & setting up moment.js 
@@ -38,38 +37,19 @@ $('.timeline').each(function() {
     }
 });
 
-// Add the ability to have an eventListener for all the save buttons
-// saveBtn has been clicked
-for (let i = 0; i < saveBtnEl.length; i++) {
-    saveBtnEl[i].addEventListener("click", function() {
-        // indicates buttons work
-        console.log("I've been clicked!");
+$('.saveBtn').on('click', function(event) {
 
-        // save the .val of taskEntry
-        saveTask();
+    // Get the entry value from the text area and store it into a variable 
 
-        // alert the user the entry has been saved
-        // window.alert("Your entry has been saved!");
 
-        // save the id from the task 
-        
-        // save both taskEntry and taskID into localStorage setItem
-    });
-}
+    let timeBlock = $('.taskEntry').attr('id');
 
-// create a function that saves the task of each of the text fields
+    let taskText = $(this).siblings('.taskEntry').val();
 
-let saveTask = function() {
+    console.log(timeBlock);
+    console.log(taskText);
 
-    // check
-    window.alert("task saved successfully");
+    // Add the new entry to local 'savedUserEntry' variable
+    // savedUserEntry.push(userEntry);
+})
 
-    // store the value of taskEntry and the associated id of each timeblock 
-    let timeBlock = $(this).parent().attr("id");
-    let taskText = $(this).siblings(".taskEntry").val();
-
-    // save values into localStorage
-    localStorage.setItem(timeBlock, taskText);
-}
-
-// retrieve from localStorage using getItem 
