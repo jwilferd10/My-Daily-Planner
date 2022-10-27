@@ -1,5 +1,4 @@
 let saveBtnEl = document.getElementsByClassName("saveBtn");
-
 let textAreaEl = document.getElementsByClassName("taskEntry");
 
 // Using moment.js for calender display 
@@ -47,13 +46,6 @@ for (let i = 0; i < saveBtnEl.length; i++) {
 
         // save the .val of taskEntry
         saveTask();
-
-        // alert the user the entry has been saved
-        // window.alert("Your entry has been saved!");
-
-        // save the id from the task 
-        
-        // save both taskEntry and taskID into localStorage setItem
     });
 }
 
@@ -70,6 +62,9 @@ let saveTask = function() {
 
     // save values into localStorage
     localStorage.setItem(timeBlock, taskText);
+
+    console.log(timeBlock);
+    console.log(taskText)
 }
 
 // retrieve from localStorage using getItem 
