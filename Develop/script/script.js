@@ -38,16 +38,20 @@ $('.timeline').each(function() {
 });
 
 $('.saveBtn').on('click', function(event) {
+    // grab the value of the taskText
+    let taskText = $(this).parent('.timeline').children('textarea')
+    console.log(taskText.val());
 
-    // Get the entry value from the text area and store it into a variable 
 
+    let textId = taskText.attr('id');
 
-    let timeBlock = $('.taskEntry').attr('id');
+    console.log(textId);
 
-    let taskText = $(this).siblings('.taskEntry').val();
+    // let taskText = $(this).siblings('.taskEntry').val();
+    // let timeBlock = taskText.attr('id');
 
-    console.log(timeBlock);
-    console.log(taskText);
+    // console.log(timeBlock);
+    // console.log(taskText);
 
     // Add the new entry to local 'savedUserEntry' variable
     // savedUserEntry.push(userEntry);
