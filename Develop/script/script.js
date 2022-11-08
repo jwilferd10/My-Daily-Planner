@@ -1,4 +1,4 @@
-// If nothning is in localStorage, set list into an empty array
+// If nothing is in localStorage, set list into an empty array
 let savedUserEntry = JSON.parse(localStorage.getItem('savedEntry')) || [];
 
 // Using moment.js for calender display 
@@ -37,23 +37,23 @@ $('.timeline').each(function() {
     }
 });
 
-$('.saveBtn').on('click', function(event) {
+$('.saveBtn').on('click', function() {
     // grab the value of the taskText
     let taskText = $(this).parent('.timeline').children('textarea')
-    console.log(taskText.val());
-
-
     let textId = taskText.attr('id');
 
-    console.log(textId);
+    // testing for values
+    // console.log(taskText.val());
+    // console.log(textId);
 
-    // let taskText = $(this).siblings('.taskEntry').val();
-    // let timeBlock = taskText.attr('id');
+    // save the data to localStorage
+    // localStorage.setItem("")
+    localStorage.setItem("task-" + textId, taskText.val());
+});
 
-    // console.log(timeBlock);
-    // console.log(taskText);
 
-    // Add the new entry to local 'savedUserEntry' variable
-    // savedUserEntry.push(userEntry);
-})
 
+for (let index = 0; index < array.length; index++) {
+    const element = array[index];
+    
+}
