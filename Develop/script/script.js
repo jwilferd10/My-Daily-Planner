@@ -1,5 +1,43 @@
-// If nothing is in localStorage, set list into an empty array
-let savedUserEntry = JSON.parse(localStorage.getItem('savedEntry')) || [];
+// timeBlock is an object that contains each hour and associated with it is an empty string
+let timeBlock = [
+    {time: "12 am", text: ""},
+    {time: "1 am", text: ""},
+    {time: "2 am", text: ""},
+    {time: "3 am", text: ""},
+    {time: "4 am", text: ""},
+    {time: "5 am", text: ""},
+    {time: "6 am", text: ""},
+    {time: "7 am", text: ""},
+    {time: "8 am", text: ""},
+    {time: "9 am", text: ""},
+    {time: "10 am", text: ""},
+    {time: "11 am", text: ""},
+    {time: "12 pm", text: ""},
+    {time: "1 pm", text: ""},
+    {time: "2 pm", text: ""},
+    {time: "3 pm", text: ""},
+    {time: "4 pm", text: ""},
+    {time: "5 pm", text: ""},
+    {time: "6 pm", text: ""},
+    {time: "7 pm", text: ""},
+    {time: "8 pm", text: ""},
+    {time: "9 pm", text: ""},
+    {time: "10 pm", text: ""},
+    {time: "11 pm", text: ""},
+]
+
+// using bootstrap, generate html for each timeBlock object 
+
+    // generate a row for every hour
+
+    // start with a div that displays each hour of the day, grabbing that info from the timeBlock object
+
+    // and then create a textarea for each hour
+
+    // finally create a save button at the end of the row
+
+    // append the html to the page
+
 
 // Using moment.js for calender display 
 // Grabbing header using DOM & setting up moment.js 
@@ -50,10 +88,3 @@ $('.saveBtn').on('click', function() {
     // localStorage.setItem("")
     localStorage.setItem("task-" + textId, taskText.val());
 });
-
-
-
-for (let index = 0; index < array.length; index++) {
-    const element = array[index];
-    
-}
