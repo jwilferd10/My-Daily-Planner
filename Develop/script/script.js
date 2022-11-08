@@ -26,6 +26,18 @@ let timeBlock = [
     {time: "11 pm", text: "", timeID: 24}
 ]
 
+// START OF CURRENT DATE FOR HEADER DISPLAY //
+
+// using moment.js format todays date
+const m = moment();
+var currentDate = m.format("dddd, MMMM Do YYYY");
+// use the text content from currentDate and set it as currentDays text
+$(currentDay).text(currentDate);
+
+// END OF CURRENT DATE FOR HEADER DISPLAY //
+
+// START OF GENERATING APPLICATION TIMEBLOCKS //
+
 // using bootstrap, generate html for each timeBlock object 
 
     // generate a row for every hour
@@ -38,13 +50,7 @@ let timeBlock = [
 
     // append the html to the page
 
-
-// Using moment.js for calender display 
-// Grabbing header using DOM & setting up moment.js 
-var header = document.header;
-const m = moment();
-var currentDate = m.format("dddd, MMMM Do YYYY");
-$(currentDay).text(currentDate);
+// END OF GENERATING APPLICATION TIMEBLOCKS //
 
 // Connects to the class attribute 'timeline' found in parent div's for each row. The function checks for current time
 $('.timeline').each(function() {
