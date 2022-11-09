@@ -38,17 +38,23 @@ $(currentDay).text(currentDate);
 
 // START OF GENERATING APPLICATION TIMEBLOCKS //
 
-// using bootstrap, generate html for each timeBlock object 
+// for each timeBlock run a function that uses the objects index and element to generate html for each time block
+$.each(timeBlock, function(index, item) {
 
     // generate a row for every hour
-
+    let timeBlockEl = $("<section>").addClass("row mb-4 mb-5-sm timeline");
+    
     // start with a div that displays each hour of the day, grabbing that info from the timeBlock object
-
+    let hourEl = $("<div>").text(item.time).addClass("col-1 border border-dark hour text-center h4");
+    
     // and then create a textarea for each hour
+    let taskEntryEl = $("<textarea>".addClass("border border-dark col-10 text-dark font-weight-bold"));
 
     // finally create a save button at the end of the row
+    let saveBtnEl = $("<button>").addClass("col-1 saveBtn").append("<span>").addClass("fas fa-save").attr("id", "btnIcon")
 
     // append the html to the page
+});
 
 // END OF GENERATING APPLICATION TIMEBLOCKS //
 
