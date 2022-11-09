@@ -48,7 +48,7 @@ $.each(timeBlock, function(index, item) {
         let hourEl = $("<div>").text(item.time).addClass("col-1 border border-dark hour text-center h4");
     
         // and then create a textarea for each hour
-        let taskEntryEl = $("<textarea>".addClass("border border-dark col-10 text-dark font-weight-bold"));
+        let taskEntryEl = $("<textarea>").addClass("border border-dark col-10 text-dark font-weight-bold");
 
         // finally create a save button at the end of the row
         let saveBtnEl = $("<button>").addClass("col-1 saveBtn").append("<span>").addClass("fas fa-save").attr("id", "btnIcon");
