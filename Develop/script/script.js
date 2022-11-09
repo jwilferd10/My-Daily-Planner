@@ -65,7 +65,7 @@ $.each(timeBlock, function(index, item) {
     $(".timeblockWrapper").append(timeBlockEl)
 
     //  run an if statement to determine time of day, depending on criteria taskEntryEl will change colors to indicate deadlines to user
-    if (item.timeID === currentTime) {
+    if (item.timeID == currentTime) {
         taskEntryEl.addClass("present");
     }
     else if (item.timeID < currentTime) {
