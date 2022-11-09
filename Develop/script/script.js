@@ -30,7 +30,6 @@ let timeBlock = [
 
 // using moment.js format todays date
 const m = moment();
-
 var currentDate = m.format("dddd, MMMM Do YYYY");
 
 // use the text content from currentDate and set it as currentDays text
@@ -77,17 +76,6 @@ $.each(timeBlock, function(index, item) {
 });
 
 // END OF GENERATING APPLICATION TIMEBLOCKS //
-
-// Connects to the class attribute 'timeline' found in parent div's for each row. The function checks for current time
-// var coloredTimeblocks = function() {
-
-// $('.timeline').each(timeBlock, function(index, item) {
-
-//     // Using taskTime and currentHour to determine hour of day
-
-// });
-
-// }
 
 $('.saveBtn').on('click', function() {
     // grab the value of the taskText
