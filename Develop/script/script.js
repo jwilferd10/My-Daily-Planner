@@ -1,39 +1,44 @@
 // timeBlock is an object that contains each hour and associated with it is an empty string. timeID is going to be compared with currentHour and add CSS based on criteria 
 let timeBlock = [
-    {time: "12 am", text: "", timeID: 1},
-    {time: "1 am", text: "", timeID: 2},
-    {time: "2 am", text: "", timeID: 3},
-    {time: "3 am", text: "", timeID: 4},
-    {time: "4 am", text: "", timeID: 5},
-    {time: "5 am", text: "", timeID: 6},
-    {time: "6 am", text: "", timeID: 7},
-    {time: "7 am", text: "", timeID: 8},
-    {time: "8 am", text: "", timeID: 9},
-    {time: "9 am", text: "", timeID: 10},
-    {time: "10 am", text: "", timeID: 11},
-    {time: "11 am", text: "", timeID: 12},
-    {time: "12 pm", text: "", timeID: 13},
-    {time: "1 pm", text: "", timeID: 14},
-    {time: "2 pm", text: "", timeID: 15},
-    {time: "3 pm", text: "", timeID: 16},
-    {time: "4 pm", text: "", timeID: 17},
-    {time: "5 pm", text: "", timeID: 18},
-    {time: "6 pm", text: "", timeID: 19},
-    {time: "7 pm", text: "", timeID: 20},
-    {time: "8 pm", text: "", timeID: 21},
-    {time: "9 pm", text: "", timeID: 22},
-    {time: "10 pm", text: "", timeID: 23},
-    {time: "11 pm", text: "", timeID: 24}
+    {time: "12 am", text: "", timeID: 0},
+    {time: "1 am", text: "", timeID: 1},
+    {time: "2 am", text: "", timeID: 2},
+    {time: "3 am", text: "", timeID: 3},
+    {time: "4 am", text: "", timeID: 4},
+    {time: "5 am", text: "", timeID: 5},
+    {time: "6 am", text: "", timeID: 6},
+    {time: "7 am", text: "", timeID: 7},
+    {time: "8 am", text: "", timeID: 8},
+    {time: "9 am", text: "", timeID: 9},
+    {time: "10 am", text: "", timeID: 10},
+    {time: "11 am", text: "", timeID: 11},
+    {time: "12 pm", text: "", timeID: 12},
+    {time: "1 pm", text: "", timeID: 13},
+    {time: "2 pm", text: "", timeID: 14},
+    {time: "3 pm", text: "", timeID: 15},
+    {time: "4 pm", text: "", timeID: 16},
+    {time: "5 pm", text: "", timeID: 17},
+    {time: "6 pm", text: "", timeID: 18},
+    {time: "7 pm", text: "", timeID: 19},
+    {time: "8 pm", text: "", timeID: 20},
+    {time: "9 pm", text: "", timeID: 21},
+    {time: "10 pm", text: "", timeID: 22},
+    {time: "11 pm", text: "", timeID: 23}
 ]
 
 // START OF CURRENT DATE FOR HEADER DISPLAY //
 
 // using moment.js format todays date
 const m = moment();
+
 var currentDate = m.format("dddd, MMMM Do YYYY");
+
 // use the text content from currentDate and set it as currentDays text
 $(currentDay).text(currentDate);
 
+// set current time to global & use moment.js to grab the hours of the day  
+var currentTime = moment().format("H");
+   
 // END OF CURRENT DATE FOR HEADER DISPLAY //
 
 // START OF GENERATING APPLICATION TIMEBLOCKS //
@@ -59,44 +64,30 @@ $.each(timeBlock, function(index, item) {
     // append the html to timeblockWrapper
     $(".timeblockWrapper").append(timeBlockEl)
 
-    coloredTimeblocks();
-
+    //  run an if statement to determine time of day, depending on criteria taskEntryEl will change colors to indicate deadlines to user
+    if (item.timeID === currentTime) {
+        taskEntryEl.addClass("present");
+    }
+    else if (item.timeID < currentTime) {
+        taskEntryEl.addClass("past");
+    }
+    else {
+        taskEntryEl.addClass("future");
+    }
 });
 
 // END OF GENERATING APPLICATION TIMEBLOCKS //
 
 // Connects to the class attribute 'timeline' found in parent div's for each row. The function checks for current time
-var coloredTimeblocks = function() {
+// var coloredTimeblocks = function() {
 
-$('.timeline').each(timeBlock, function(index, item) {
-    // Uses moment.js to grab the hours of the day  
-    var currentTime = moment().hours();
-   
-    // Converts currentTime to a number value 
-    var currentHour = Number(currentTime);
+// $('.timeline').each(timeBlock, function(index, item) {
 
-    // Checks the id number associated with the p 
-    var pId = $(this).children('div').children("p").attr("id");
-        
-    // taskTime converts pId into a useable number
-    var taskTime = Number(pId);
+//     // Using taskTime and currentHour to determine hour of day
 
-    // Using taskTime and currentHour to determine hour of day
-    // If time is no longer present, apply 'past' style from CSS
-    if(item.timeID < currentHour) {
-        $(this).children("textarea").addClass('past')
-    }
-    // If task is currently within present hour, apply 'present' style from CSS
-    else if(taskTime === currentHour) {
-        $(this).children("textarea").addClass('present')
-    }
-    // If time is ahead of present hour, apply 'future' style from CSS
-    else {
-        $(this).children("textarea").addClass('future')
-    }
-});
+// });
 
-}
+// }
 
 $('.saveBtn').on('click', function() {
     // grab the value of the taskText
