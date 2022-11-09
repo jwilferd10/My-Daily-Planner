@@ -59,12 +59,16 @@ $.each(timeBlock, function(index, item) {
     // append the html to timeblockWrapper
     $(".timeblockWrapper").append(timeBlockEl)
 
+    coloredTimeblocks();
+
 });
 
 // END OF GENERATING APPLICATION TIMEBLOCKS //
 
 // Connects to the class attribute 'timeline' found in parent div's for each row. The function checks for current time
-$('.timeline').each(function() {
+var coloredTimeblocks = function() {
+
+$('.timeline').each(timeBlock, function(index, item) {
     // Uses moment.js to grab the hours of the day  
     var currentTime = moment().hours();
    
@@ -79,7 +83,7 @@ $('.timeline').each(function() {
 
     // Using taskTime and currentHour to determine hour of day
     // If time is no longer present, apply 'past' style from CSS
-    if(taskTime < currentHour) {
+    if(item.timeID < currentHour) {
         $(this).children("textarea").addClass('past')
     }
     // If task is currently within present hour, apply 'present' style from CSS
@@ -91,6 +95,8 @@ $('.timeline').each(function() {
         $(this).children("textarea").addClass('future')
     }
 });
+
+}
 
 $('.saveBtn').on('click', function() {
     // grab the value of the taskText
