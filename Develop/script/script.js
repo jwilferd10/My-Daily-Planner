@@ -55,7 +55,11 @@ $.each(timeBlock, function(index, item) {
         let taskEntryEl = $("<textarea>").addClass("border border-dark col-10 text-dark font-weight-bold");
 
         // finally create a save button at the end of the row
-        let saveBtnEl = $("<button>").addClass("col-1 saveBtn").append("<span>").addClass("fas fa-save").attr("id", "btnIcon");
+        let saveBtnEl = $("<button>").addClass("col-1 saveBtn")
+
+        let btnIconEl = $("<span>").addClass("fas fa-save").attr("id", "btnIcon");
+
+        saveBtnEl.append(btnIconEl);
 
         // append each element to timeBlockEl
         timeBlockEl.append(hourEl, taskEntryEl, saveBtnEl);
