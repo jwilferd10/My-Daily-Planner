@@ -106,8 +106,6 @@ $('.saveBtn').each(function(index, item) {
         // check taskText value 
         // console.log(taskText);
 
-        // debugger;
-        
         // save data to localstorage
         localStorage.setItem(textId, JSON.stringify(taskText));
     });
