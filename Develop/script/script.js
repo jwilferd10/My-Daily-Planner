@@ -57,8 +57,10 @@ $.each(timeBlock, function(index, item) {
         // finally create a save button at the end of the row
         let saveBtnEl = $("<button>").addClass("col-1 saveBtn")
 
+        // create a span element with an emoji as a class
         let btnIconEl = $("<span>").addClass("fas fa-save").attr("id", "btnIcon");
 
+        // append the span element to saveBtnEl
         saveBtnEl.append(btnIconEl);
 
         // append each element to timeBlockEl
@@ -81,10 +83,23 @@ $.each(timeBlock, function(index, item) {
 
 // END OF GENERATING APPLICATION TIMEBLOCKS //
 
-$('.saveBtn').on('click', function() {
-    // grab the value of the taskText
-    let taskText = $(this).parent('.timeline').children('textarea')
-    let textId = taskText.attr('id');
+// START OF SAVE BUTTON FUNCTION 
+
+// when the save button is clicked run a function for each button that collects the data into localstorage
+$('.saveBtn').each(function(index, item) {
+
+    // add an onclick event that obtains 
+    $(this).on("click", function() {
+
+        // test if onclick works
+        window.alert("I've been clicked!");
+
+        // grab the value of taskText from textarea
+        // let taskText = $(this).parent('.timeline').children('textarea')
+        
+        // let textId = taskText.attr('id');
+
+    })
 
     // testing for values
     // console.log(taskText.val());
@@ -94,3 +109,5 @@ $('.saveBtn').on('click', function() {
     // localStorage.setItem("")
     localStorage.setItem("task-" + textId, taskText.val());
 });
+
+// END OF SAVE BUTTON FUNCTION 
