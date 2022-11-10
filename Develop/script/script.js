@@ -98,19 +98,19 @@ $('.saveBtn').each(function(index, item) {
         let textId = $(this).siblings("div").attr("id")
 
         // check textId value
-        console.log(textId);
+        // console.log(textId);
 
         // grab the value of taskText from textarea
         let taskText = $(this).siblings('textarea').val();
         
         // check taskText value 
-        console.log(taskText);
+        // console.log(taskText);
 
-    })
-
-    // save the data to localStorage
-    // localStorage.setItem("")
-    // localStorage.setItem("task-" + textId, taskText.val());
+        // debugger;
+        
+        // save data to localstorage
+        localStorage.setItem(textId, JSON.stringify(taskText));
+    });
 });
 
 // END OF SAVE BUTTON FUNCTION 
