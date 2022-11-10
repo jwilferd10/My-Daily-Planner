@@ -49,7 +49,7 @@ $.each(timeBlock, function(index, item) {
     let timeBlockEl = $("<section>").addClass("row mb-4 mb-5-sm timeline");
     
         // start with a div that displays each hour of the day, grabbing that info from the timeBlock object
-        let hourEl = $("<div>").text(item.time).addClass("col-1 border border-dark hour text-center h4");
+        let hourEl = $("<div>").text(item.time).addClass("col-1 border border-dark hour text-center h4").attr("id", item.time);
     
         // and then create a textarea for each hour
         let taskEntryEl = $("<textarea>").addClass("border border-dark col-10 text-dark font-weight-bold");
@@ -92,7 +92,13 @@ $('.saveBtn').each(function(index, item) {
     $(this).on("click", function() {
 
         // test if onclick works
-        window.alert("I've been clicked!");
+        // window.alert("I've been clicked!");
+
+        // define textId to grab the id of textarea div
+        let textId = $(this).siblings("div").attr("id")
+
+        // lets see if this is working
+        console.log(textId);
 
         // grab the value of taskText from textarea
         // let taskText = $(this).parent('.timeline').children('textarea')
@@ -100,10 +106,6 @@ $('.saveBtn').each(function(index, item) {
         // let textId = taskText.attr('id');
 
     })
-
-    // testing for values
-    // console.log(taskText.val());
-    // console.log(textId);
 
     // save the data to localStorage
     // localStorage.setItem("")
