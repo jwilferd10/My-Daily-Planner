@@ -107,7 +107,7 @@ $('.saveBtn').each(function(index, item) {
 
     // save the data to localStorage
     // localStorage.setItem("")
-    localStorage.setItem("task-" + textId, taskText.val());
+    // localStorage.setItem("task-" + textId, taskText.val());
 });
 
 // END OF SAVE BUTTON FUNCTION 
