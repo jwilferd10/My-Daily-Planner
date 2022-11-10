@@ -97,13 +97,14 @@ $('.saveBtn').each(function(index, item) {
         // define textId to grab the id of textarea div
         let textId = $(this).siblings("div").attr("id")
 
-        // lets see if this is working
-        console.log(textId);
+        // check textId value
+        // console.log(textId);
 
         // grab the value of taskText from textarea
-        // let taskText = $(this).parent('.timeline').children('textarea')
+        let taskText = $(this).parent('.timeline').children('textarea')
         
-        // let textId = taskText.attr('id');
+        // check taskText value 
+        console.log(taskText);
 
     })
 
