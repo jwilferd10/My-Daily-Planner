@@ -95,7 +95,7 @@ $('.saveBtn').each(function(index, item) {
         // window.alert("I've been clicked!");
 
         // define textId to grab the id of textarea div
-        let textId = $(this).siblings("div").attr("id")
+        let textId = $(this).siblings("div").attr("id");
 
         // check textId value
         // console.log(textId);
@@ -119,10 +119,26 @@ $('.saveBtn').each(function(index, item) {
 $(function() {
 
     // check to see if this works 
-    console.log("Ready to go!");
+    // console.log("Ready to go!");
 
-    // Create a loop that cycles through information saved to localstorage
-    // grab the index of the array 
+    // Create a loop that cycles through information saved to localstorage. Call it on textarea since we're passing data into it
+    $("textarea").each(function () {
+        // Thank you mdn web docs for providing insight
+        // iterate over localstorage keys
+        for (let i = 0; i < localStorage.length; i++) {
+            // get the value set over each key, save it to taskData
+            let taskData = localStorage.key(i);
+            // grab the time slot, this will be compared with the the key saved in localStorage 
+            savedTimeBlock = $(this).siblings("div").attr("id");
+
+            console.log(savedTimeBlock);
+            // And when compared if they match, load the value of the localstorage object into the associated timeblock.
+
+            
+        }
+    })
+
+    // grab the index of the array, this will be our key 
     // and grab the value of time within timeBlocks object
 
     // compare if array index is same to time and print the value of whats inside either the time object or the index of array
