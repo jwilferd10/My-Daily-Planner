@@ -115,12 +115,18 @@ $('.saveBtn').each(function(index, item) {
 
 // START OF LOCALSTORAGE LOADUP
 
-// Create a function that activates on page loadup
+// Create a function that activates on page loadup, using .ready should load the saved data before users interact with the page
+$(function() {
+
+    // check to see if this works 
+    console.log("Ready to go!");
+
     // Create a loop that cycles through information saved to localstorage
     // grab the index of the array 
     // and grab the value of time within timeBlocks object
 
     // compare if array index is same to time and print the value of whats inside either the time object or the index of array
     // Likely done??
+});
 
 // END OF LOCALSTORAGE LOADUP
