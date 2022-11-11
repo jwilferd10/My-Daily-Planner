@@ -1,3 +1,5 @@
+// START OF TIMEBLOCK OBJECT //
+
 // timeBlock is an object that contains each hour and associated with it is an empty string. timeID is going to be compared with currentHour and add CSS based on criteria 
 let timeBlock = [
     {time: "12 am", text: "", timeID: 0},
@@ -25,6 +27,8 @@ let timeBlock = [
     {time: "10 pm", text: "", timeID: 22},
     {time: "11 pm", text: "", timeID: 23}
 ]
+
+// END OF TIMEBLOCK OBJECT //
 
 // START OF CURRENT DATE FOR HEADER DISPLAY //
 
@@ -86,13 +90,16 @@ $.each(timeBlock, function(index, item) {
 // START OF SAVE BUTTON FUNCTION 
 
 // when the save button is clicked run a function for each button that collects the data into localstorage
-$('.saveBtn').each(function(index, item) {
+$('.saveBtn').each(function() {
 
     // add an onclick event that obtains 
     $(this).on("click", function() {
 
         // test if onclick works
         // window.alert("I've been clicked!");
+
+        // Alert user task has been saved
+        window.alert("Your entry has been saved!");
 
         // define textId to grab the id of textarea div
         let textId = $(this).siblings("div").attr("id");
@@ -123,26 +130,26 @@ $(function() {
 
     // Create a loop that cycles through information saved to localstorage. Call it on textarea since we're passing data into it
     $("textarea").each(function () {
+        // reference the textarea, localStorage value will be passed into this. This is the targeted area where 
+        let savedTaskEntry = $(this);
+
         // Thank you mdn web docs for providing insight
         // iterate over localstorage keys
         for (let i = 0; i < localStorage.length; i++) {
+
             // get the value set over each key, save it to taskData
             let taskData = localStorage.key(i);
-            // grab the time slot, this will be compared with the the key saved in localStorage 
-            savedTimeBlock = $(this).siblings("div").attr("id");
 
-            console.log(savedTimeBlock);
-            // And when compared if they match, load the value of the localstorage object into the associated timeblock.
+            // savedTextId grabs the id of hourEl. It will be compared with the the key saved in localstorage. 
+            savedTextId = $(this).siblings("div").attr("id");
 
-            
+            // and if the ID's match, the value of the localstorage object will load into savedTaskEntry.
+            if (taskData == savedTextId) {
+                // savedTaskEntry's value is the JSON object
+                savedTaskEntry.val(JSON.parse(localStorage.getItem(taskData)));
+            }  
         }
     })
-
-    // grab the index of the array, this will be our key 
-    // and grab the value of time within timeBlocks object
-
-    // compare if array index is same to time and print the value of whats inside either the time object or the index of array
-    // Likely done??
 });
 
 // END OF LOCALSTORAGE LOADUP
