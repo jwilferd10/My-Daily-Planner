@@ -50,25 +50,31 @@ var currentTime = moment().format("H");
 $.each(timeBlock, function(index, item) {
 
     // generate a row for every hour NOTE: !!TIMELINE IS USED FOR THE COLOR CODED TIMEBLOCKS!!
-    let timeBlockEl = $("<section>").addClass("row mb-4 mb-5-sm timeline");
+    let timeBlockEl = $("<section>").addClass("container");
+
+        // create a div that holds row
+        let containerEl = $("<div>").addClass("row mb-1 mb-5-sm timeline")
+
+            // start with a div that displays each hour of the day, grabbing that info from the timeBlock object
+            const hourEl = $("<div>").text(item.time).addClass("col-1 border border-dark hour text-center h4").attr("id", item.time);
     
-        // start with a div that displays each hour of the day, grabbing that info from the timeBlock object
-        let hourEl = $("<div>").text(item.time).addClass("col-1 border border-dark hour text-center h4").attr("id", item.time);
-    
-        // and then create a textarea for each hour
-        let taskEntryEl = $("<textarea>").addClass("border border-dark col-10 text-dark font-weight-bold");
+            // and then create a textarea for each hour
+            const taskEntryEl = $("<textarea>").addClass("border border-dark col-10 text-dark font-weight-bold");
 
-        // finally create a save button at the end of the row
-        let saveBtnEl = $("<button>").addClass("col-1 saveBtn")
+            // finally create a save button at the end of the row
+            const saveBtnEl = $("<button>").addClass("col-1 saveBtn")
 
-        // create a span element with an emoji as a class
-        let btnIconEl = $("<span>").addClass("fas fa-save").attr("id", "btnIcon");
+            // create a span element with an emoji as a class
+            const btnIconEl = $("<span>").addClass("fas fa-save").attr("id", "btnIcon");
 
-        // append the span element to saveBtnEl
-        saveBtnEl.append(btnIconEl);
+            // append the span element to saveBtnEl
+            saveBtnEl.append(btnIconEl);
 
-        // append each element to timeBlockEl
-        timeBlockEl.append(hourEl, taskEntryEl, saveBtnEl);
+        // append everything to this row
+        containerEl.append(hourEl, taskEntryEl, saveBtnEl)
+
+    // append the containerEl to timeBlockEl
+    timeBlockEl.append(containerEl);
 
     // append the html to timeblockWrapper
     $(".timeblockWrapper").append(timeBlockEl)
