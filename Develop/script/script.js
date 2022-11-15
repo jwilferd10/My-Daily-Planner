@@ -44,6 +44,21 @@ var currentTime = moment().format("H");
    
 // END OF CURRENT DATE FOR HEADER DISPLAY //
 
+// START OF DELETE ALL //
+
+// event listerner for delete all button
+$(".deleteBtn").on("click", function(){
+    // window.alert("I've been clicked")
+
+    // Set the string value for every textarea to be an empty string
+    $("textarea").val('');
+
+    // Clear the data from localstorage 
+    localStorage.clear();
+});
+
+// END OF DELETE ALL //
+
 // START OF GENERATING APPLICATION TIMEBLOCKS //
 
 // for each timeBlock run a function that uses the objects index and element to generate html for each time block
