@@ -1,5 +1,7 @@
 # :clipboard: :watch: :date: My Daily Planner :date: :watch: :clipboard: <br>
 
+[![license](https://img.shields.io/badge/license-MIT-blue)](https://shields.io)
+
 ### Done using paper but still need a planner? Here's an app to help you with that! <br>
 
 :computer: **Live Deployment:** https://jwilferd10.github.io/My-Daily-Planner/
