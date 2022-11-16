@@ -74,12 +74,14 @@ $.each(timeBlock, function(index, item) {
             // start with a div that displays each hour of the day, grabbing that info from the timeBlock object
             const hourEl = $("<div>").addClass("col-1 border border-dark d-flex justify-content-center").attr("id", item.time);
     
+            // seperate the time itself from parent div
             const hourText = $("<div>").text(item.time).addClass("mt-4 h5")
 
+            // append hourText to hourEl
             hourEl.append(hourText)
 
             // and then create a textarea for each hour
-            const taskEntryEl = $("<textarea>").addClass("border border-dark col-10 text-dark font-weight-bold");
+            const taskEntryEl = $("<textarea>").addClass("border border-dark col-9 text-dark font-weight-bold");
 
             // finally create a save button at the end of the row
             const saveBtnEl = $("<button>").addClass("col-1 saveBtn")
@@ -90,8 +92,17 @@ $.each(timeBlock, function(index, item) {
             // append the span element to saveBtnEl
             saveBtnEl.append(btnIconEl);
 
+            // button to delete individual tasks
+            const delEntryBtn = $("<button>").addClass("col-1 deleteBtn");
+
+            // icon of the delete button
+            const delBtnIcon = $("<span>").addClass("fas fa-trash").attr("id", "delBtnIcon");
+
+            // append delete button
+            delEntryBtn.append(delBtnIcon);
+            
         // append everything to this row
-        containerEl.append(hourEl, taskEntryEl, saveBtnEl)
+        containerEl.append(hourEl, taskEntryEl, saveBtnEl, delEntryBtn)
 
     // append the containerEl to timeBlockEl
     timeBlockEl.append(containerEl);
@@ -145,6 +156,12 @@ $('.saveBtn').each(function() {
 });
 
 // END OF SAVE BUTTON FUNCTION 
+
+// START OF DELETE BUTTON
+// $(".deleteBtn").each(function() {
+    
+// });
+
 
 // START OF LOCALSTORAGE LOADUP
 
