@@ -52,6 +52,7 @@ Main Resources:
 - CSS
 - Bootstrap
 - JavaScript
+- jQuery
 - Moment.js
 
 ## :minidisc: Installation and Usage:
