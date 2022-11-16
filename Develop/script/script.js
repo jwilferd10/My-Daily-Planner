@@ -72,7 +72,7 @@ $.each(timeBlock, function(index, item) {
         let containerEl = $("<div>").addClass("row mb-1 mb-5-sm timeline")
 
             // start with a div that displays each hour of the day, grabbing that info from the timeBlock object
-            const hourEl = $("<div>").text(item.time).addClass("col-1 border border-dark hour text-center h4").attr("id", item.time);
+            const hourEl = $("<div>").text(item.time).addClass("col-1 border border-dark d-flex justify-content-center").attr("id", item.time);
     
             // and then create a textarea for each hour
             const taskEntryEl = $("<textarea>").addClass("border border-dark col-10 text-dark font-weight-bold");
