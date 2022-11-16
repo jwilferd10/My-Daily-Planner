@@ -30,7 +30,9 @@ My Daily Planner utilizes moment.JS to present the date and help color code each
 
 :arrow_forward: :white_circle: Indicates that the time has passed
 
-Users must individually save each entry on each time block to save it to localStorage. Users also have the ability to quickly remove an entry, or remove ALL entries at the push of a button. Happy Coding! 
+Users must individually save each entry on each time block to save it to localStorage. Users also have the ability to quickly remove an entry, or remove ALL entries at the push of a button. 
+
+It's my hope that My Daily Planner helps YOU out anyway possible, happy coding!
 </p>
   
 ## :book: User Story:
