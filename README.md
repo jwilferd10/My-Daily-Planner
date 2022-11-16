@@ -1,4 +1,4 @@
-# :clipboard: :watch: :date: Work Day Scheduler :date: :watch: :clipboard: <br>
+# :clipboard: :watch: :date: My Daily Planner :date: :watch: :clipboard: <br>
 
 ### Done using paper but still need a planner? Here's an app to help you with that! <br>
 
