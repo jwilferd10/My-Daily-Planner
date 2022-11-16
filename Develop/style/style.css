@@ -75,7 +75,7 @@ textarea{
   background-position: 0 -10px;
 }
 
-.saveBtn:hover .fas {
+.blockBtn:hover .fas {
   animation: breathingEffect 1.8s ease-out infinite normal forwards;
 }
 

@@ -84,7 +84,7 @@ $.each(timeBlock, function(index, item) {
             const taskEntryEl = $("<textarea>").addClass("border border-dark col-9 text-dark font-weight-bold");
 
             // finally create a save button at the end of the row
-            const saveBtnEl = $("<button>").addClass("col-1 saveBtn")
+            const saveBtnEl = $("<button>").addClass("col-1 saveBtn blockBtn")
 
             // create a span element with an emoji as a class
             const btnIconEl = $("<span>").addClass("fas fa-save").attr("id", "btnIcon");
@@ -93,7 +93,7 @@ $.each(timeBlock, function(index, item) {
             saveBtnEl.append(btnIconEl);
 
             // button to delete individual tasks
-            const delEntryBtn = $("<button>").addClass("col-1 deleteBtn");
+            const delEntryBtn = $("<button>").addClass("col-1 deleteBtn blockBtn");
 
             // icon of the delete button
             const delBtnIcon = $("<span>").addClass("fas fa-trash").attr("id", "delBtnIcon");
@@ -158,9 +158,19 @@ $('.saveBtn').each(function() {
 // END OF SAVE BUTTON FUNCTION 
 
 // START OF DELETE BUTTON
-// $(".deleteBtn").each(function() {
-    
-// });
+$(".deleteBtn").each(function() {
+    $(this).on("click", function() {
+
+        // grabbing the id of the timeblock
+        let textId = $(this).siblings("div").attr("id");
+
+        // Set the string value for every textarea to be an empty string
+        let deleteText = $(this).siblings("textarea").val('');
+
+        // remove the data from localstorage 
+        localStorage.removeItem(textId, JSON.stringify(deleteText));
+    })
+});
 
 
 // START OF LOCALSTORAGE LOADUP
