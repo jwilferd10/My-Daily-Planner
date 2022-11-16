@@ -2,9 +2,9 @@
 
 ### Done using paper but still need a planner? Here's an app to help you with that! <br>
 
-:computer: **Live Deployment:** https://jwilferd10.github.io/Work-Day-Scheduler/.
+:computer: **Live Deployment:** https://jwilferd10.github.io/My-Daily-Planner/
 
-:computer: **Github Repository:** https://github.com/jwilferd10/Work-Day-Scheduler
+:computer: **Github Repository:** https://github.com/jwilferd10/My-Daily-Planner
 
 ## :open_file_folder: Table of Contents:
   - [Preview](#camera-preview)
