@@ -161,6 +161,9 @@ $('.saveBtn').each(function() {
 $(".deleteBtn").each(function() {
     $(this).on("click", function() {
 
+        // alert user
+        window.alert("Your task has successfully been deleted!");
+
         // grabbing the id of the timeblock
         let textId = $(this).siblings("div").attr("id");
 
@@ -171,7 +174,7 @@ $(".deleteBtn").each(function() {
         localStorage.removeItem(textId, JSON.stringify(deleteText));
     })
 });
-
+// END OF DELETE BUTTON 
 
 // START OF LOCALSTORAGE LOADUP
 
