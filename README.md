@@ -61,7 +61,9 @@ Main Resources:
 ### Usage:
 - Click on the text area within the time block
 - Write your texts out 
-- Click on the lock button to save your input
+- Click on the button with the floppy-disk (The :large_blue_circle: Button) to save your input
+- Click on the trash can icon to remove the entry
+- Click on Delete All button to delete all entries
 
 ## :e-mail: Contact Information:
 - ### [jwilferd10](https://github.com/jwilferd10)
