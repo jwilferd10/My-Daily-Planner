@@ -85,6 +85,15 @@ textarea{
   background-position: 0 -10px;
 }
 
+.deleteBtn:hover {
+  color: rgb(252, 166, 166);
+  background-color: #ae011e;
+  background-image: linear-gradient(180deg, #c3776c, #9e021c 100%);
+  transition: all .5s ease-out;
+  background-size: 1px 100px;
+  background-position: 0 -10px;
+}
+
 .blockBtn:hover .fas {
   animation: breathingEffect 1.8s ease-out infinite normal forwards;
 }
