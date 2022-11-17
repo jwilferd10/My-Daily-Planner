@@ -64,6 +64,7 @@ textarea{
   background-size: 1px 100px;
   background-position: 0 -10px;
   color: white;
+  box-shadow: 0 2px #999;
 }
 
 .saveBtn:hover {
@@ -76,6 +77,11 @@ textarea{
   color: #a3c6f1;
 }
 
+.saveBtn:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
 .deleteBtn {
   color: white;
   background-color: #EA0028;
@@ -83,6 +89,7 @@ textarea{
   transition: all .5s ease-out;
   background-size: 1px 100px;
   background-position: 0 -10px;
+  box-shadow: 0 2px #999;
 }
 
 .deleteBtn:hover {
@@ -92,6 +99,11 @@ textarea{
   transition: all .5s ease-out;
   background-size: 1px 100px;
   background-position: 0 -10px;
+}
+
+.deleteBtn:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 
 .blockBtn:hover .fas {
