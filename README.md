@@ -20,9 +20,9 @@
 
 ## :wave: Description: 
 <p> 
-Have you ever wanted an app that helps you to plan your entire day out, hour by hour? Welcome to My Daily Planner, it's here to help you with that! My Daily Planner is a :two: :four: - hour time scheduling application that saves user input to localStorage.
+Have you ever wanted an app that helps you to plan your entire day out, hour by hour? Welcome to My Daily Planner, it's here to help you with that! My Daily Planner is a :two::four: - hour time scheduling application that saves user input to localStorage.
 
-My Daily Planner utilizes moment.JS to present the date and help color code each time block based on the time of day:
+My Daily Planner utilizes jQuery for it's quick and easy setup and moment.JS to present the current date and help color code each time block based on the time of day:
 
 :arrow_forward: :green_circle: Indicates the time left in the day 
 
