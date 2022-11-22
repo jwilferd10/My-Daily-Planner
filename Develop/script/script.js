@@ -127,7 +127,7 @@ $.each(timeBlock, function(index, item) {
 // when the save button is clicked run a function for each button that collects the data into localstorage
 $('.saveBtn').each(function() {
     $(this).on("click", function() {
-        // showcase modal
+        // Alert user task has been saved
         $('#saveEntryModal').modal('show');
 
         // Alert user task has been saved
@@ -149,7 +149,7 @@ $('.saveBtn').each(function() {
 // START OF DELETE BUTTON
 $(".deleteBtn").each(function() {
     $(this).on("click", function() {
-        // Showcase modal
+        // Confirm if user wants to remove task
         $('#deleteEntryModal').modal('show');
 
         // confirm button clicked
