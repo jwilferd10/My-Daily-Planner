@@ -127,9 +127,9 @@ $.each(timeBlock, function(index, item) {
 
 // when the save button is clicked run a function for each button that collects the data into localstorage
 $('.saveBtn').each(function() {
-
-    // add an onclick event that obtains 
     $(this).on("click", function() {
+        // showcase modal
+        $('#saveEntryModal').modal('show');
 
         // test if onclick works
         // window.alert("I've been clicked!");
@@ -208,9 +208,4 @@ $(function() {
         }
     })
 });
-
 // END OF LOCALSTORAGE LOADUP
-
-// $('#myModal').on('shown.bs.modal', function () {
-//     $('#myInput').trigger('focus')
-//   })
