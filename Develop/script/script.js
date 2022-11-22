@@ -130,9 +130,6 @@ $('.saveBtn').each(function() {
         // Alert user task has been saved
         $('#saveEntryModal').modal('show');
 
-        // Alert user task has been saved
-        window.alert("Your entry has been saved!");
-
         // define textId to grab the id of textarea div
         let textId = $(this).siblings("div").attr("id");
 
