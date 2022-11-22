@@ -92,7 +92,7 @@ $.each(timeBlock, function(index, item) {
             saveBtnEl.append(btnIconEl);
 
             // button to delete individual tasks
-            const delEntryBtn = $("<button>").addClass("col-1 deleteBtn blockBtn");
+            const delEntryBtn = $("<button>").addClass("col-1 deleteBtn deleteStyle blockBtn");
 
             // icon of the delete button
             const delBtnIcon = $("<span>").addClass("fas fa-trash").attr("id", "delBtnIcon");
@@ -159,20 +159,20 @@ $('.saveBtn').each(function() {
 // START OF DELETE BUTTON
 $(".deleteBtn").each(function() {
     $(this).on("click", function() {
+        // Showcase modal
+        $('#deleteEntryModal').modal('show');
 
-        // alert user
-        // window.alert("Your task has successfully been deleted!");
+        // confirm button clicked
+        $(".deleteConfirmBtn").on("click", function() {
+            // grabbing the id of the timeblock
+            let textId = $(".deleteBtn").siblings("div").attr("id");
 
-        
+            // Set the string value for every textarea to be an empty string
+            let deleteText = $(".deleteBtn").siblings("textarea").val('');
 
-        // grabbing the id of the timeblock
-        let textId = $(this).siblings("div").attr("id");
-
-        // Set the string value for every textarea to be an empty string
-        let deleteText = $(this).siblings("textarea").val('');
-
-        // remove the data from localstorage 
-        localStorage.removeItem(textId, JSON.stringify(deleteText));
+            // remove the data from localstorage 
+            localStorage.removeItem(textId, JSON.stringify(deleteText));
+        });
     })
 });
 // END OF DELETE BUTTON 

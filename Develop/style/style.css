@@ -82,7 +82,7 @@ textarea{
   transform: translateY(4px);
 }
 
-.deleteBtn {
+.deleteStyle {
   color: white;
   background-color: #EA0028;
   background-image: linear-gradient(180deg, #FF9A8B, #EA0028 100%);
