@@ -60,7 +60,6 @@ $(".deleteAllBtn").on("click", function(){
 // END OF DELETE ALL //
 
 // START OF GENERATING APPLICATION TIMEBLOCKS //
-
 // for each timeBlock run a function that uses the objects index and element to generate html for each time block
 $.each(timeBlock, function(index, item) {
 
@@ -131,24 +130,15 @@ $('.saveBtn').each(function() {
         // showcase modal
         $('#saveEntryModal').modal('show');
 
-        // test if onclick works
-        // window.alert("I've been clicked!");
-
         // Alert user task has been saved
         window.alert("Your entry has been saved!");
 
         // define textId to grab the id of textarea div
         let textId = $(this).siblings("div").attr("id");
 
-        // check textId value
-        // console.log(textId);
-
         // grab the value of taskText from textarea
         let taskText = $(this).siblings('textarea').val();
         
-        // check taskText value 
-        // console.log(taskText);
-
         // save data to localstorage
         localStorage.setItem(textId, JSON.stringify(taskText));
     });
@@ -178,12 +168,8 @@ $(".deleteBtn").each(function() {
 // END OF DELETE BUTTON 
 
 // START OF LOCALSTORAGE LOADUP
-
 // Create a function that activates on page loadup, using .ready should load the saved data before users interact with the page
 $(function() {
-
-    // check to see if this works 
-    // console.log("Ready to go!");
 
     // Create a loop that cycles through information saved to localstorage. Call it on textarea since we're passing data into it
     $("textarea").each(function () {
