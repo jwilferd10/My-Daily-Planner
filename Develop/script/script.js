@@ -53,6 +53,8 @@ $(".deleteAllBtn").on("click", function(){
 
     // Clear the data from localstorage 
     localStorage.clear();
+
+    $('#deleteAllConfirmModal').modal('show');
 });
 
 // END OF DELETE ALL //
@@ -157,6 +159,9 @@ $(".deleteBtn").each(function() {
 
             // remove the data from localstorage 
             localStorage.removeItem(textId, JSON.stringify(deleteText));
+
+            // alert user of success
+            $('#deleteConfirmModal').modal('show');
         });
     })
 });
