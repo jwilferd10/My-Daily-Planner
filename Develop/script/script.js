@@ -47,9 +47,9 @@ var currentTime = moment().format("H");
 // START OF DELETE ALL //
 
 // event listerner for delete all button
-$(".deleteBtn").on("click", function(){
+$(".deleteAllBtn").on("click", function(){
     // alert user tasks have been deleted
-    window.alert("All tasks have been deleted!");
+    // window.alert("All tasks have been deleted!");
     
     // Set the string value for every textarea to be an empty string
     $("textarea").val('');
@@ -209,3 +209,7 @@ $(function() {
 });
 
 // END OF LOCALSTORAGE LOADUP
+
+// $('#myModal').on('shown.bs.modal', function () {
+//     $('#myInput').trigger('focus')
+//   })
