@@ -49,7 +49,6 @@ var currentTime = moment().format("H");
 // event listerner for delete all button
 $(".deleteAllBtn").on("click", function(){
     // alert user tasks have been deleted
-    // window.alert("All tasks have been deleted!");
     
     // Set the string value for every textarea to be an empty string
     $("textarea").val('');
@@ -162,7 +161,9 @@ $(".deleteBtn").each(function() {
     $(this).on("click", function() {
 
         // alert user
-        window.alert("Your task has successfully been deleted!");
+        // window.alert("Your task has successfully been deleted!");
+
+        
 
         // grabbing the id of the timeblock
         let textId = $(this).siblings("div").attr("id");
