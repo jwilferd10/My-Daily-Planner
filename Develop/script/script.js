@@ -158,25 +158,19 @@ $('.saveBtn').each(function() {
 // START OF DELETE BUTTON
 $(".deleteBtn").each(function() {
     $(this).on("click", function() {
-        // Confirm if user wants to remove task
-        $('#deleteEntryModal').modal('show');
+        // grabbing the id of the timeblock
+        let textId = $(this).siblings("div").attr("id");
 
-        // confirm button clicked
-        $(".deleteConfirmBtn").on("click", function() {
-            // grabbing the id of the timeblock
-            let textId = $(".deleteBtn").siblings("div").attr("id");
+        // Set the string value for every textarea to be an empty string
+        let deleteText = $(this).siblings("textarea").val('');
 
-            // Set the string value for every textarea to be an empty string
-            let deleteText = $(".deleteBtn").siblings("textarea").val('');
+        // remove the data from localstorage 
+        localStorage.removeItem(textId, JSON.stringify(deleteText));
 
-            // remove the data from localstorage 
-            localStorage.removeItem(textId, JSON.stringify(deleteText));
-
-            // alert user of success
-            $('#deleteConfirmModal').modal('show');
-        });
-    })
-});
+        // alert user of success
+        $('#deleteConfirmModal').modal('show');
+    });
+})
 // END OF DELETE BUTTON 
 
 // START OF LOCALSTORAGE LOADUP
