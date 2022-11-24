@@ -30,7 +30,7 @@ My Daily Planner utilizes jQuery for it's quick and easy setup and moment.JS to 
 
 :arrow_forward: :white_circle: Indicates that the time has passed
 
-Users must individually save each entry on each time block to save it to localStorage. Users also have the ability to quickly remove an entry, or remove ALL entries at the push of a button. 
+Users can save each entry to localStorage individually or altogether based on the type of save button clicked. This is likewise for deleting entries, however if the 'Delete All' button is engaged users will be prompted with a modal to confirm their decision. 
 
 It's my hope that My Daily Planner helps YOU out anyway possible, happy coding!
 </p>
@@ -64,9 +64,10 @@ Main Resources:
 - You can do this by clicking the *GREEN* button above and you can download it by ZIP or copy the SSH!
 ### Usage:
 - Click on the text area within the time block
-- Write your texts out 
-- Click on the button with the floppy-disk (The :large_blue_circle: Button) to save your input
-- Click on the trash can icon to remove the entry
+- Fill out your entry
+- Click on the button with the 💾 floppy disk 💾 emoji (The :large_blue_circle: Button) to save the entry
+- Click on the button with the 🗑️ trash can 🗑️ (The :red_circle: Button) to delete the entry
+- Click 'Save All' to save all entries within each time block
 - Click on Delete All button to delete all entries
 
 ## :e-mail: Contact Information:
