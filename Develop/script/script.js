@@ -59,13 +59,12 @@ $(".deleteAllBtn").on("click", function(){
 
 // START OF SAVE ALL //
 $(".saveAllBtn").click(function(){
-	
-	// save button operational
-	window.alert("Successful click");
-
+	// for each textarea
     $("textarea").each(function () {
+        // get the value of textarea
         let taskText = $(this).val();
 
+        // get the id
         let textId = $(this).siblings("div").attr("id");
 
         // save data to localstorage
