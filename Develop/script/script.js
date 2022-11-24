@@ -71,6 +71,9 @@ $(".saveAllBtn").click(function(){
         // save data to localstorage
         localStorage.setItem(textId, JSON.stringify(taskText));
     })
+
+    // modal confirmation popup
+    $('#saveAllEntryModal').modal('show');
 });
 
 // START OF GENERATING APPLICATION TIMEBLOCKS //
