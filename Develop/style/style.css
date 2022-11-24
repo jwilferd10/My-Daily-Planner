@@ -56,7 +56,7 @@ textarea{
   color: white;
 }
 
-.saveBtn {
+.saveStyle {
   border-left: 1px solid black;
   background-color: #06AED5;
   background-image: linear-gradient(180deg, #6adaf3, #067b96 100%);
@@ -67,7 +67,7 @@ textarea{
   box-shadow: 0 2px #999;
 }
 
-.saveBtn:hover {
+.saveStyle:hover {
   border-left: 1px solid black;
   background-color: #04758e;
   background-image: linear-gradient(180deg, #4fa1b3, #053c48 100%);

@@ -98,7 +98,7 @@ $.each(timeBlock, function(index, item) {
             const taskEntryEl = $("<textarea>").addClass("border border-dark col-8 text-dark font-weight-bold");
 
             // finally create a save button at the end of the row
-            const saveBtnEl = $("<button>").addClass("col-1 saveBtn blockBtn")
+            const saveBtnEl = $("<button>").addClass("col-1 saveBtn saveStyle blockBtn")
 
             // create a span element with an emoji as a class
             const btnIconEl = $("<span>").addClass("fas fa-save").attr("id", "btnIcon");
