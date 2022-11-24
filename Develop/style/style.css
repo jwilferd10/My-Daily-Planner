@@ -77,7 +77,7 @@ textarea{
   color: #a3c6f1;
 }
 
-.saveBtn:active {
+.saveStyle:active {
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
@@ -101,7 +101,7 @@ textarea{
   background-position: 0 -10px;
 }
 
-.deleteBtn:active {
+.deleteStyle:active {
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
