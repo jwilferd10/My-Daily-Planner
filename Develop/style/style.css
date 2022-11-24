@@ -92,7 +92,7 @@ textarea{
   box-shadow: 0 2px #999;
 }
 
-.deleteBtn:hover {
+.deleteStyle:hover {
   color: rgb(252, 166, 166);
   background-color: #ae011e;
   background-image: linear-gradient(180deg, #c3776c, #9e021c 100%);
