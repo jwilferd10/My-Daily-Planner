@@ -45,7 +45,6 @@ var currentTime = moment().format("H");
 // END OF CURRENT DATE FOR HEADER DISPLAY //
 
 // START OF DELETE ALL //
-
 // event listerner for delete all button
 $(".deleteAllBtn").on("click", function(){    
     // Set the string value for every textarea to be an empty string
@@ -56,8 +55,23 @@ $(".deleteAllBtn").on("click", function(){
 
     $('#deleteAllConfirmModal').modal('show');
 });
-
 // END OF DELETE ALL //
+
+// START OF SAVE ALL //
+$(".saveAllBtn").click(function(){
+	
+	// save button operational
+	window.alert("Successful click");
+
+    $("textarea").each(function () {
+        let taskText = $(this).val();
+
+        let textId = $(this).siblings("div").attr("id");
+
+        // save data to localstorage
+        localStorage.setItem(textId, JSON.stringify(taskText));
+    })
+});
 
 // START OF GENERATING APPLICATION TIMEBLOCKS //
 // for each timeBlock run a function that uses the objects index and element to generate html for each time block
@@ -123,7 +137,6 @@ $.each(timeBlock, function(index, item) {
 // END OF GENERATING APPLICATION TIMEBLOCKS //
 
 // START OF SAVE BUTTON FUNCTION 
-
 // when the save button is clicked run a function for each button that collects the data into localstorage
 $('.saveBtn').each(function() {
     $(this).on("click", function() {
@@ -140,7 +153,6 @@ $('.saveBtn').each(function() {
         localStorage.setItem(textId, JSON.stringify(taskText));
     });
 });
-
 // END OF SAVE BUTTON FUNCTION 
 
 // START OF DELETE BUTTON
