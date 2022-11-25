@@ -132,3 +132,10 @@ textarea{
     transform: scale(1.0);
   }
 }
+
+@media (min-width: 700px) {
+  .btnAllStyle {
+    width:50%;
+    margin: auto; 
+  }
+}
