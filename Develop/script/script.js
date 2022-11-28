@@ -92,16 +92,16 @@ $.each(timeBlock, function(index, item) {
             const taskEntryEl = $("<textarea>").addClass("border border-dark col-8 text-dark font-weight-bold");
 
             // finally create a save button at the end of the row
-            const saveBtnEl = $("<button>").addClass("col-1 saveBtn saveStyle blockBtn")
+            const saveBtnEl = $("<button>").addClass("mobileDesignHide col-sm-1 saveBtn saveStyle blockBtn")
 
             // create a span element with an emoji as a class
-            const btnIconEl = $("<span>").addClass("fas fa-save").attr("id", "btnIcon");
+            const btnIconEl = $("<span>").addClass("mobileDesignHide fas fa-save").attr("id", "btnIcon");
 
             // append the span element to saveBtnEl
             saveBtnEl.append(btnIconEl);
 
             // button to delete individual tasks
-            const delEntryBtn = $("<button>").addClass("col-1 deleteBtn deleteStyle blockBtn");
+            const delEntryBtn = $("<button>").addClass("col-2  col-sm-1 deleteBtn deleteStyle blockBtn");
 
             // icon of the delete button
             const delBtnIcon = $("<span>").addClass("fas fa-trash").attr("id", "delBtnIcon");
