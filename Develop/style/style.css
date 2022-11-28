@@ -21,6 +21,10 @@ textarea{
   border-bottom: 10px solid black;
 }
 
+.mobileBtn {
+  display: none;
+}
+
 /* start of time-blocks */
 .time-block{
   text-align: center;
@@ -149,5 +153,11 @@ textarea{
 @media (max-width: 330px) {
   .mobileTextDesign {
     font-size: 110%
+  }
+}
+
+@media (max-width: 300px) {
+  .mobileBtn {
+    display: block;   
   }
 }
