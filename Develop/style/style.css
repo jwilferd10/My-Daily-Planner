@@ -145,3 +145,9 @@ textarea{
     display:none
   }
 }
+
+@media (max-width: 330px) {
+  .mobileTextDesign {
+    font-size: 110%
+  }
+}
