@@ -28,10 +28,7 @@ let timeBlock = [
     {time: "11 PM", text: "", timeID: 23}
 ]
 
-// END OF TIMEBLOCK OBJECT //
-
 // START OF CURRENT DATE FOR HEADER DISPLAY //
-
 // using moment.js format todays date
 const m = moment();
 var currentDate = m.format("dddd, MMMM Do YYYY");
@@ -42,8 +39,6 @@ $(currentDay).text(currentDate);
 // set current time to global & use moment.js to grab the hours of the day  
 var currentTime = moment().format("H");
    
-// END OF CURRENT DATE FOR HEADER DISPLAY //
-
 // START OF DELETE ALL //
 // event listerner for delete all button
 $(".deleteAllBtn").on("click", function(){    
@@ -55,7 +50,6 @@ $(".deleteAllBtn").on("click", function(){
 
     $('#deleteAllConfirmModal').modal('show');
 });
-// END OF DELETE ALL //
 
 // START OF SAVE ALL //
 $(".saveAllBtn").click(function(){
@@ -136,8 +130,6 @@ $.each(timeBlock, function(index, item) {
     }
 });
 
-// END OF GENERATING APPLICATION TIMEBLOCKS //
-
 // START OF SAVE BUTTON FUNCTION 
 // when the save button is clicked run a function for each button that collects the data into localstorage
 $('.saveBtn').each(function() {
@@ -155,7 +147,6 @@ $('.saveBtn').each(function() {
         localStorage.setItem(textId, JSON.stringify(taskText));
     });
 });
-// END OF SAVE BUTTON FUNCTION 
 
 // START OF DELETE BUTTON
 $(".deleteBtn").each(function() {
@@ -173,7 +164,6 @@ $(".deleteBtn").each(function() {
         $('#deleteConfirmModal').modal('show');
     });
 })
-// END OF DELETE BUTTON 
 
 // START OF LOCALSTORAGE LOADUP
 // Create a function that activates on page loadup, using .ready should load the saved data before users interact with the page
@@ -202,4 +192,3 @@ $(function() {
         }
     })
 });
-// END OF LOCALSTORAGE LOADUP
