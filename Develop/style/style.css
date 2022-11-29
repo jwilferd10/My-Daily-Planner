@@ -148,6 +148,9 @@ textarea{
   .mobileDesignHide {
     display:none
   }
+  .mobileBtn {
+    display: block;   
+  }
 }
 
 @media (max-width: 330px) {
@@ -156,8 +159,8 @@ textarea{
   }
 }
 
-@media (max-width: 300px) {
+/* @media (max-width: 300px) {
   .mobileBtn {
     display: block;   
   }
-}
+} */
