@@ -21,6 +21,12 @@ textarea{
   border-bottom: 10px solid black;
 }
 
+.heroStyle {
+  color: #fff;
+  font-weight: normal;
+  animation: neonEffect 1s ease-in-out infinite alternate; 
+}
+
 .mobileBtn {
   display: none;
 }
@@ -119,6 +125,7 @@ textarea{
   transform: scale(2.0);
 }
 
+/* Button Animation */
 @keyframes breathingEffect {
   0% {
     transform: scale(1.0);
@@ -137,6 +144,27 @@ textarea{
   }
 }
 
+/* Neon Animation */
+@keyframes neonEffect {
+  from {
+    text-shadow:
+      0 0 4px #fff,
+      0 0 10px #fff,
+      0 0 30px #ff319b,
+      0 0 50px #ff319b,
+      0 0 70px #ff319b,
+      0 0 90px #ff319b;
+  } to {
+    text-shadow: 
+    0 0 2px #fff,
+    0 0 5px #fff,
+    0 0 15px #ff319b,
+    0 0 25px #ff319b,
+    0 0 35px #ff319b,
+    0 0 45px #ff319b;
+  }
+} 
+
 @media (min-width: 700px) {
   .btnAllStyle {
     width:50%;
@@ -150,6 +178,10 @@ textarea{
   }
   .mobileBtn {
     display: block;   
+  }
+
+  .heroQuote {
+    font-size: 12pt;
   }
 }
 
