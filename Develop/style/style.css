@@ -185,6 +185,13 @@ textarea{
   }
 }
 
+@media (max-width: 767px) {
+  .mobileTextSize {
+    font-weight: bold;
+    font-size: 100%
+  }
+}
+
 @media (max-width: 575px) {
   .mobileDesignHide {
     display:none

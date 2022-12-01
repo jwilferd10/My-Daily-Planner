@@ -83,7 +83,7 @@ $.each(timeBlock, function(index, item) {
             const hourEl = $("<div>").addClass("col-2 border border-dark d-flex justify-content-center").attr("id", item.time);
     
             // seperate the time itself from parent div
-            const hourText = $("<div>").text(item.time).addClass("mt-4 h5")
+            const hourText = $("<div>").text(item.time).addClass("mt-4 h5 mobileTextSize")
 
             // append hourText to hourEl
             hourEl.append(hourText)
