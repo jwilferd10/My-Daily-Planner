@@ -125,6 +125,14 @@ textarea{
   border:none !important;
 }
 
+/* modal content design  */
+.modal-content {
+  position: absolute !important;
+  left: 50% !important;
+  top: 50% !important;
+  transform: translate(-50%, 100%) !important;
+}
+
 /* Footer Button */
 .fa-github {
   transform: scale(2.0);
