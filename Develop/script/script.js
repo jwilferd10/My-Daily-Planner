@@ -166,15 +166,14 @@ $(".deleteBtn").each(function() {
 })
 
 // START OF LOCALSTORAGE LOADUP
-// Create a function that activates on page loadup, using .ready should load the saved data before users interact with the page
+// function that activates on page loadup, using .ready should load the saved data before users interact with the page
 $(function() {
 
-    // Create a loop that cycles through information saved to localstorage. Call it on textarea since we're passing data into it
+    // loop that cycles through information saved to localstorage. Call it on textarea since we're passing data into it
     $("textarea").each(function () {
         // reference the textarea, localStorage value will be passed into this. This is the targeted area where 
         let savedTaskEntry = $(this);
 
-        // Thank you mdn web docs for providing insight
         // iterate over localstorage keys
         for (let i = 0; i < localStorage.length; i++) {
 
