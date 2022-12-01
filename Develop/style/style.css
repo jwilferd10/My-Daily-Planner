@@ -120,6 +120,11 @@ textarea{
   animation: breathingEffect 1.8s ease-out infinite normal forwards;
 }
 
+/* modal header design */
+.modal-header {
+  border:none !important;
+}
+
 /* Footer Button */
 .fa-github {
   transform: scale(2.0);
