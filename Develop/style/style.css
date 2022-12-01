@@ -4,6 +4,50 @@ body {
   line-height: 1;
 }
 
+.jumbotron {
+  text-align: center;
+  background-color: transparent;
+  color: black;
+  border-radius: 0;
+  border-bottom: 10px solid black;
+}
+
+/* app title */
+.heroStyle {
+  color: #fff;
+  font-weight: normal;
+  animation: neonEffect 1s ease-in-out infinite alternate; 
+}
+
+/* mobile buttons, appears in smaller screens. See media-queries */
+.mobileBtn {
+  display: none;
+}
+
+/* time-blocks styling */
+.time-block{
+  text-align: center;
+  border-radius: 15px;
+}
+
+/* row styling, responsible for space between each timeblock */
+.row {
+  white-space: pre-wrap;
+  height: 80px;
+  margin-bottom: 20px;
+  border-top: 1px solid white;
+  margin-top: -6px;
+}
+
+/* start of timeblock children styling */
+.hour {
+  background-color: #ffffff;
+  color: #000000;
+  border-top: 1px dashed #000000;
+  margin-top:10px;
+}
+
+/* timeblock textarea styling */
 textarea{
   background: transparent;
   border: none;
@@ -13,45 +57,8 @@ textarea{
   padding: 10px;
 }
 
-.jumbotron {
-  text-align: center;
-  background-color: transparent;
-  color: black;
-  border-radius: 0;
-  border-bottom: 10px solid black;
-}
 
-.heroStyle {
-  color: #fff;
-  font-weight: normal;
-  animation: neonEffect 1s ease-in-out infinite alternate; 
-}
-
-.mobileBtn {
-  display: none;
-}
-
-/* start of time-blocks */
-.time-block{
-  text-align: center;
-  border-radius: 15px;
-}
-
-.row {
-  white-space: pre-wrap;
-  height: 80px;
-  margin-bottom: 20px;
-  border-top: 1px solid white;
-  margin-top: -6px;
-}
-
-.hour {
-  background-color: #ffffff;
-  color: #000000;
-  border-top: 1px dashed #000000;
-  margin-top:10px;
-}
-
+/* color coding */
 .past {
   background-color: #d3d3d3;
   color: white;
@@ -66,6 +73,8 @@ textarea{
   background-color: #77dd77;
   color: white;
 }
+
+/* save buttons */
 
 .saveStyle {
   border-left: 1px solid black;
@@ -92,6 +101,8 @@ textarea{
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
+
+/* delete buttons */
 
 .deleteStyle {
   color: white;
@@ -120,6 +131,8 @@ textarea{
 .blockBtn:hover .fas {
   animation: breathingEffect 1.8s ease-out infinite normal forwards;
 }
+
+/* end of timeblock children styling */
 
 /* modal header design */
 .modal-header {
@@ -179,6 +192,8 @@ textarea{
   }
 } 
 
+/* media queries */
+
 @media (min-width: 700px) {
   .btnAllStyle {
     width:50%;
@@ -211,9 +226,3 @@ textarea{
     font-size: 110%
   }
 }
-
-/* @media (max-width: 300px) {
-  .mobileBtn {
-    display: block;   
-  }
-} */
