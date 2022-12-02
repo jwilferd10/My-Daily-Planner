@@ -10,6 +10,7 @@
 
 ## :open_file_folder: Table of Contents:
   - [Preview](#camera-preview)
+  - [Demo](#movie_camera-demo)
   - [Description](#wave-description)
   - [User Story](#book-user-story)
   - [Resources Used](#floppy_disk-resources-used)
@@ -21,6 +22,10 @@
   <img src= "Develop/img/previewDesktop.jpg"  width="79%") />
   <img src= "Develop/img/preview400x850.jpg" width="20%") />
 </p>
+
+## :movie_camera: Demo:
+![image](Develop/img/MyDailyPlanner.gif)
+![image](Develop/img/MyDailyPannerMobile.gif)
 
 ## :wave: Description: 
 <p> 
