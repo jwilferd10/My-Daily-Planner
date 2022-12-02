@@ -29,7 +29,7 @@
       </p>
 
       <!-- App Information -->
-      <button class="btn-lg btnInfo btn btn-outline-info">ℹ</button>
+      <button class="btn-lg btnInfo btn btn-outline-info" data-toggle="modal" data-target="#informationsModal">ℹ</button>
 
       <!-- First 'All' Button Wrapper -->
       <div class="mobileDesignHide btn-group btn-lg btnAllStyle mt-2" role="group" aria-label="Top Page Save or Delete All Buttons">
@@ -87,6 +87,36 @@
 
     <!-- All Modals Below -->
 
+    <!-- App Info Modal -->
+    <div class="modal fade" id="informationsModal" tabindex="-1" role="dialog" aria-labelledby="informationsModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content modal-content-info">
+          <div class="modal-header">
+            <h5 class="modal-title" id="informationsModalLabel">ℹ Instructions</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body text-center">
+            <p>Welcome, My Daily Planner is a 24 hour time scheduling application that saves user input to localStorage. Each timeblock is color coded to indicate the time of day:</p>
+            <ul class="listStyle">
+              <li class="pb-2">▶ 🟢 Indicates the time left in the day</li>
+
+              <li class="pb-2">▶ 🔴 Indicates current time</li>
+  
+              <li class="pb-2">▶ ⚪ Indicates that the time has passed</li>
+            </ul>
+            <p>Any button with 💾 will save your entry</p>
+            <p>Any button with 🗑️ will delete your entry.</p>
+            <p><b>Enjoy!</b></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
     <!-- Delete All Modal -->
     <div class="modal fade" id="deleteAllModal" tabindex="-1" role="dialog" aria-labelledby="deleteAllModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">

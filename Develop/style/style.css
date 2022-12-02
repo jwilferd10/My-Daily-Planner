@@ -30,6 +30,12 @@ body {
   margin-bottom: 1%;
 }
 
+/* unordered list style */
+.listStyle {
+  list-style: none;
+  text-align: justify;
+}
+
 /* mobile buttons, appears in smaller screens. See media-queries */
 .mobileBtn {
   display: none;
@@ -158,6 +164,9 @@ textarea{
   transform: translate(-50%, 100%) !important;
 }
 
+.modal-content-info {
+  transform: translate(-50%, 35%) !important;
+}
 /* Footer Button */
 .fa-github {
   transform: scale(2.0);
