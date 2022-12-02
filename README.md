@@ -18,7 +18,7 @@
 
 ## :camera: Preview:
 <p float="left">
-  <img src= "Develop/img/previewDesktop.jpg"  width=79%") />
+  <img src= "Develop/img/previewDesktop.jpg"  width="79%") />
   <img src= "Develop/img/preview400x850.jpg" width="20%") />
 </p>
 
