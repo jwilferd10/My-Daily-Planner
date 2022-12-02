@@ -17,6 +17,8 @@
   - [Contact Information](#e-mail-contact-information)
 
 ## :camera: Preview:
+![image](Develop/img/previewDesktop.jpg)
+![image](Develop/img/preview400x850.jpg)
 
 ## :wave: Description: 
 <p> 
