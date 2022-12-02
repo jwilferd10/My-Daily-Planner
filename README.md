@@ -25,7 +25,7 @@
 
 ## :movie_camera: Demo:
 ![image](Develop/img/MyDailyPlanner.gif)
-![image](Develop/img/MyDailyPannerMobile.gif)
+![image](Develop/img/MyDailyPlannerMobile.gif)
 
 ## :wave: Description: 
 <p> 
